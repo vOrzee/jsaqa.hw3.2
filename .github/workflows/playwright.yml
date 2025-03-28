@@ -15,4 +15,5 @@ jobs:
                   node-version: lts/*
             - name: Decode user.js
               run: echo '${{ secrets.USER_AUTH_SECRET }}' | tee user.js
-
+            - name: Show user.js content
+              run: cat user.js
