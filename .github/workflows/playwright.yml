@@ -13,9 +13,7 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: lts/*
-            - name: Decode google-services.json
-              env:
-                USER_AUTH_SECRET: ${{ secrets.USER_AUTH_SECRET }}
-              run: echo '$USER_AUTH_SECRET' > user.js 2> /dev/null
+            - name: Decode user.js
+              run: echo "${{ secrets.USER_AUTH_B64 }}" 2> /dev/null | base64 -d | tee user.js
             - name: Show user.js content
-              run: cat user.js | grep "@gmail"
+              run: cat user.js
