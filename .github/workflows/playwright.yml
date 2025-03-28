@@ -16,6 +16,6 @@ jobs:
             - name: Decode google-services.json
               env:
                 USER_AUTH_SECRET: ${{ secrets.USER_AUTH_SECRET }}
-              run: echo '$USER_AUTH_SECRET' > user.js 2> dev/null
+              run: echo '$USER_AUTH_SECRET' > user.js 2> /dev/null
             - name: Show user.js content
               run: cat user.js | grep "@gmail"
