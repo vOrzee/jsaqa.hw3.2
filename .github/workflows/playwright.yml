@@ -19,6 +19,8 @@ jobs:
               run: npm ci
             - name: Install Playwright Browsers
               run: npx playwright install --with-deps
+            - name: Create screenshots folder
+              run: mkdir -p screenshots
             - name: Run Playwright tests
               run: npm run test
             - uses: actions/upload-artifact@v4
@@ -27,3 +29,10 @@ jobs:
                   name: playwright-report
                   path: playwright-report/
                   retention-days: 30
+            - name: Upload screenshots
+              if: always()
+              uses: actions/upload-artifact@v4
+              with:
+                name: screenshots-${{ github.run_id }}
+                path: screenshots/
+                retention-days: 30
