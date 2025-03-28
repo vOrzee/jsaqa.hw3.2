@@ -1,0 +1,33 @@
+{
+    "name": "jsaqa.wh3.2",
+    "version": "1.0.0",
+    "description": "playwright test",
+    "main": "index.js",
+    "scripts": {
+        "test": "playwright test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vOrzee/jsaqa.hw3.2.git"
+    },
+    "keywords": [
+        "playwright",
+        "test",
+        "jsaqa"
+    ],
+    "author": "Roman Leshin",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/vOrzee/jsaqa.hw3.2/issues"
+    },
+    "homepage": "https://github.com/vOrzee/jsaqa.hw3.2#readme",
+    "devDependencies": {
+        "@playwright/test": "^1.51.1",
+        "@types/node": "^22.13.14",
+        "eslint": "^9.23.0",
+        "eslint-config-prettier": "^10.1.1",
+        "eslint-plugin-prettier": "^5.2.5",
+        "globals": "^16.0.0",
+        "prettier": "^3.5.3"
+    }
+}
