@@ -2,7 +2,7 @@
 import { test, expect } from "@playwright/test";
 import authConfig from "../user";
 
-test("should authorize user successfully", async ({ page }) => {
+test("should authorize user failure", async ({ page }) => {
     await page.goto("https://netology.ru/?modal=sign_in");
 
     const email = authConfig.login;
